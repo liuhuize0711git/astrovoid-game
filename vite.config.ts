@@ -5,6 +5,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages 的项目站点挂在 /<仓库名>/ 这个子路径下，
+    // 所以构建时必须指定 base，否则 /assets/... 这类绝对路径会 404。
+    // 部署到其他路径时改这里即可。
+    base: '/astrovoid-game/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

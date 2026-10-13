@@ -61,8 +61,19 @@ npm run lint     # TypeScript 类型检查
 - **lucide-react** 图标
 - **@google/genai**（可选服务端能力）
 
+## 在线玩
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并部署到：
+
+```
+https://liuhuize0711git.github.io/astrovoid-game/
+```
+
+部署逻辑在 `.github/workflows/deploy-pages.yml`，不需要本地装 Node 环境。
+
 ## 说明
 
-`dist/index.html` 里引用的是绝对路径（`/assets/...`），如果要用 GitHub Pages 这类子路径部署，
-需要把 `vite.config.ts` 的 `base` 设成仓库名后重新构建，或者直接使用 `astrovoid-standalone.html`
-（单文件版不受路径影响）。
+- `vite.config.ts` 里的 `base` 固定为 `/astrovoid-game/`，这是 GitHub Pages 项目站点的子路径。
+  如果部署到别的路径（比如自定义域名下的根目录），把它改成 `/` 或对应路径即可。
+- 仓库里的 `dist/` 是**本地构建的历史产物**，只作参考；线上版本由 Actions 重新构建，两者可能不一致。
+- `dist/astrovoid-standalone.html` 是打包好的单文件版本，双击就能玩，不依赖任何路径或服务器。
