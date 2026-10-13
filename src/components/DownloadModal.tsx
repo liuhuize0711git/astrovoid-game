@@ -57,7 +57,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose })
               </div>
 
               <a
-                href="/astrovoid-standalone.html"
+                href="astrovoid-standalone.html"
                 download="astrovoid-standalone.html"
                 className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-cyan-600 px-3.5 py-2 text-xs font-bold text-white shadow-md hover:bg-cyan-500 transition"
               >
@@ -87,7 +87,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ isOpen, onClose })
               </div>
 
               <a
-                href="/astrovoid-game.zip"
+                href="astrovoid-game.zip"
                 download="astrovoid-game.zip"
                 className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-800 px-3.5 py-2 text-xs font-bold text-slate-200 hover:bg-slate-700 hover:text-white transition"
               >

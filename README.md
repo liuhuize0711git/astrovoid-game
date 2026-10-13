@@ -75,5 +75,8 @@ https://liuhuize0711git.github.io/astrovoid-game/
 
 - `vite.config.ts` 里的 `base` 固定为 `/astrovoid-game/`，这是 GitHub Pages 项目站点的子路径。
   如果部署到别的路径（比如自定义域名下的根目录），把它改成 `/` 或对应路径即可。
-- 仓库里的 `dist/` 是**本地构建的历史产物**，只作参考；线上版本由 Actions 重新构建，两者可能不一致。
-- `dist/astrovoid-standalone.html` 是打包好的单文件版本，双击就能玩，不依赖任何路径或服务器。
+- `dist/` 是构建产物，**已加入 .gitignore，不进版本库**；线上版本由 Actions 每次重新构建。
+- `public/` 目录里的文件会被 Vite 原样拷贝到构建输出根目录。游戏界面"打包保存"里提供的两个下载项
+  （`astrovoid-standalone.html` 单文件离线版、`astrovoid-game.zip` 完整源码包）就放在这里。
+  注意"打包保存"用的是相对路径，改动目录结构时要一并检查。
+- `astrovoid-standalone.html` 是打包好的单文件版本，双击就能玩，不依赖任何路径或服务器。
