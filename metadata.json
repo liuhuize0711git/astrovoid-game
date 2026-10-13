@@ -1,0 +1,6 @@
+{
+  "name": "AstroVoid: Retro Space Shooter",
+  "description": "经典街机风格复古太空战机射击游戏，具备炫酷粒子特效、多样武器升级、Boss 决战与街机排行榜系统。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
